@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HN NEWS</title>
+    <!--A simple html page that includes Bootstrap for css styling -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body><div class="row">
+    <div class="col-md-4">Scrape HN</div><!--Putting the title on the left side of the content-->
+    <!-- a for loop to output the content from the gethnfrontpage function. For each link from the gethnfrontpage function output its direct link and title in the form of an html link. -->
+    <div class="col-md-4">{% for news in hn %}
+    <b><a href="{{news['link']}}">{{news['title']}}</a></b><br/>
+    <hr />
+    {% endfor %} <!-- end the loop -->
+  </div>
+    <div class="col-md-4">frontpage</div> <!-- Second half of the page title on the right side of the page -->
+
+
+</body>
+</html>
